@@ -1,0 +1,16 @@
+c:\users\horacioh\documents\visual studio 2015\Projects\Music Player\Music Player\bin\Debug\Music Player.exe.config
+c:\users\horacioh\documents\visual studio 2015\Projects\Music Player\Music Player\bin\Debug\Music Player.exe
+c:\users\horacioh\documents\visual studio 2015\Projects\Music Player\Music Player\bin\Debug\Music Player.pdb
+c:\users\horacioh\documents\visual studio 2015\Projects\Music Player\Music Player\obj\Debug\Music Player.csprojResolveAssemblyReference.cache
+c:\users\horacioh\documents\visual studio 2015\Projects\Music Player\Music Player\obj\Debug\MainWindow.g.cs
+c:\users\horacioh\documents\visual studio 2015\Projects\Music Player\Music Player\obj\Debug\App.g.cs
+c:\users\horacioh\documents\visual studio 2015\Projects\Music Player\Music Player\obj\Debug\Music Player_MarkupCompile.cache
+c:\users\horacioh\documents\visual studio 2015\Projects\Music Player\Music Player\obj\Debug\Music Player_MarkupCompile.lref
+c:\users\horacioh\documents\visual studio 2015\Projects\Music Player\Music Player\obj\Debug\MainWindow.baml
+c:\users\horacioh\documents\visual studio 2015\Projects\Music Player\Music Player\obj\Debug\Music Player.g.resources
+c:\users\horacioh\documents\visual studio 2015\Projects\Music Player\Music Player\obj\Debug\Music_Player.Properties.Resources.resources
+c:\users\horacioh\documents\visual studio 2015\Projects\Music Player\Music Player\obj\Debug\Music Player.csproj.GenerateResource.Cache
+c:\users\horacioh\documents\visual studio 2015\Projects\Music Player\Music Player\obj\Debug\Music Player.exe
+c:\users\horacioh\documents\visual studio 2015\Projects\Music Player\Music Player\obj\Debug\Music Player.pdb
+c:\users\horacioh\documents\visual studio 2015\Projects\Music Player\Music Player\obj\Debug\Player.g.cs
+c:\users\horacioh\documents\visual studio 2015\Projects\Music Player\Music Player\obj\Debug\Player.baml

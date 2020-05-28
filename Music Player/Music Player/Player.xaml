@@ -1,0 +1,83 @@
+﻿<UserControl x:Class="Music_Player.Player"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Music_Player"
+             mc:Ignorable="d" 
+             d:DesignHeight="437" d:DesignWidth="620">
+    <Grid>
+        <ListBox x:Name="listaDeReproduccion" HorizontalAlignment="Left" Height="362" Margin="452,10,0,0" VerticalAlignment="Top" Width="158" DragEnter="listaDeReproduccion_DragEnter" Drop="listaDeReproduccion_Drop" MouseDoubleClick="listaDeReproduccion_MouseDoubleClick"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="293" Margin="77,48,0,0" VerticalAlignment="Top" Width="294" Source="Icon/music.png"/>
+        <MediaElement x:Name="mePlayer" HorizontalAlignment="Left" Height="362" Margin="10,10,0,0" VerticalAlignment="Top" Width="437" 
+                      MediaEnded="mePlayer_MediaEnded" MediaOpened="mePlayer_MediaOpened"
+                      LoadedBehavior="Manual" UnloadedBehavior="Close"
+						Volume="{Binding Value, ElementName=sliderVolumen}" Stretch="Fill" >
+            <MediaElement.Effect>
+                <DropShadowEffect BlurRadius="9" ShadowDepth="8"/>
+            </MediaElement.Effect>
+        </MediaElement>
+        <Button x:Name="btn_music" Content="Button" HorizontalAlignment="Left" Margin="133,398,0,0" VerticalAlignment="Top" Width="37" Height="31" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="btn_music_Click">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="Icon/playlist.png"/>
+            </Button.OpacityMask>
+            <Button.Background>
+                <ImageBrush ImageSource="Icon/playlist.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_atras" Content="Button" HorizontalAlignment="Left" Margin="173,398,0,0" VerticalAlignment="Top" Width="36" Height="31" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="btn_atras_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Icon/previous.png"/>
+            </Button.Background>
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="Icon/previous.png"/>
+            </Button.OpacityMask>
+        </Button>
+        <Button x:Name="btn_stop" Content="Button" HorizontalAlignment="Left" Margin="212,398,0,0" VerticalAlignment="Top" Width="37" Height="31" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="btn_stop_Click">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="Icon/stop.png"/>
+            </Button.OpacityMask>
+            <Button.Background>
+                <ImageBrush ImageSource="Icon/stop.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_pause" Content="Button" HorizontalAlignment="Left" Margin="251,398,0,0" VerticalAlignment="Top" Width="37" Height="31" Click="btn_pause_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="Icon/pause.png"/>
+            </Button.OpacityMask>
+            <Button.Background>
+                <ImageBrush ImageSource="Icon/pause.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_play" Content="Button" HorizontalAlignment="Left" Margin="251,398,0,0" VerticalAlignment="Top" Width="37" Height="31" Click="btn_play_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="Icon/play.png"/>
+            </Button.OpacityMask>
+            <Button.Background>
+                <ImageBrush ImageSource="Icon/play.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_adelante" Content="Button" HorizontalAlignment="Left" Margin="290,398,0,0" VerticalAlignment="Top" Width="37" Height="31" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="btn_adelante_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Icon/next.png"/>
+            </Button.Background>
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="Icon/next.png"/>
+            </Button.OpacityMask>
+        </Button>
+        <Slider x:Name="sliderVolumen" HorizontalAlignment="Left" Margin="385,404,0,15" VerticalAlignment="Center" Width="80" Height="18" Maximum="1" MinWidth="80"
+                Value="0.5" TickFrequency="0.1"
+						SmallChange="0.1" IsMoveToPointEnabled="True"/>
+        <Image x:Name="image_sonido" HorizontalAlignment="Left" Height="31" Margin="336,398,0,0" VerticalAlignment="Top" Width="34" Source="Icon/volume.png"/>
+        <Slider x:Name="sliderTimeLine" Margin="10,379,10,39" Width="600" IsMoveToPointEnabled="True"
+				Style="{DynamicResource SliderHazardStyle}"	
+                MouseLeftButtonUp="sliderTimeLine_MouseLeftButtonUp"
+					Thumb.DragStarted="sliderTimeLine_DragStarted"
+					Thumb.DragCompleted="sliderTimeLine_DragCompleted" BorderBrush="{x:Null}" Background="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"
+                TabIndex="2147483646" Maximum="100" ValueChanged="sliderTimeLine_ValueChanged" 
+                />
+        <Label x:Name="lbl_total_time" Content="00:00" HorizontalAlignment="Left" Margin="539,404,0,0" VerticalAlignment="Top" Width="54"/>
+        <Label x:Name="lbl_timer" Content="00:00" HorizontalAlignment="Left" Margin="470,404,0,0" VerticalAlignment="Top" Width="55"/>
+
+    </Grid>
+</UserControl>
